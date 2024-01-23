@@ -9,7 +9,6 @@ WORKDIR /var/www/html
 RUN rm -frv /var/www/html
 RUN unzip oxer.zip
 RUN cp -rvf oxer/* .
-RUN rm -rf oxer oxer.zip
 ENTRYPOINT ["/usr/sbin/apache2ctl"]
 CMD ["-D", "FOREGROUND"]
 EXPOSE 80
